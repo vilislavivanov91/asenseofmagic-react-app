@@ -9,27 +9,28 @@ let image = {
   src: photo
 }
 
+const products = [
+  { name: 'First Product', price: 100, image: image },
+  { name: 'Second Product', price: 13, image: image },
+  { name: 'Third Product', price: 40, image: image },
+  { name: 'Fourth Product', price: 150, image: image }
+]
+
 function RandomProducts (props) {
+  const productsElement = products.map(p => {
+    return (
+      <div>
+        <Product image={p.image} />
+        <ProductInfo name={p.name} price={p.price} />
+      </div>
+    )
+  })
+
   return (
     <div className='container-product'>
       <h1>Shop Now</h1>
       <div className='random-products'>
-        <div>
-          <Product image={image} />
-          <ProductInfo name='First Product' price={100} />
-        </div>
-        <div>
-          <Product image={image} />
-          <ProductInfo name='Second Product' price={13} />
-        </div>
-        <div>
-          <Product image={image} />
-          <ProductInfo name='Third Product' price={40} />
-        </div>
-        <div>
-          <Product image={image} />
-          <ProductInfo name='Fourth Product' price={150} />
-        </div>
+        {productsElement}
       </div>
     </div>
   )
