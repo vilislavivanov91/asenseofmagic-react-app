@@ -41,6 +41,10 @@
   border: none;
 }
 
+.navigation-main svg {
+  margin-right: 15px;
+}
+
 .navigation-secondary {
   display: flex;
   align-items: center;
@@ -59,5 +63,9 @@
 @media (max-width: 550px) {
   .navigation a {
       border: none;
+  }
+
+  .navigation-main svg {
+    margin-right: 5px;
   }
 }
