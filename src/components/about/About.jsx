@@ -23,7 +23,7 @@ const info = {
 
 function About (props) {
   return (
-    <div className='about-wrapper'>
+    <div className='about-wrapper container'>
       <h1>About me</h1>
       <div className='about-me'>
         <AboutImage image={image} />

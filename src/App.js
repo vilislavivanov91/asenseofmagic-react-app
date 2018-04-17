@@ -3,6 +3,7 @@ import Header from './components/header/Header'
 import RandomProducts from './components/random-store/RandomProducts'
 import BackgroundImage from './components/background-image/BackgroundImage'
 import About from './components/about/About'
+import Contact from './components/contact/Contact'
 
 class App extends Component {
   render () {
@@ -12,6 +13,7 @@ class App extends Component {
         <RandomProducts />
         <BackgroundImage />
         <About />
+        <Contact />
         Hello World!
       </div>
     )
