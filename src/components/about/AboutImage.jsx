@@ -10,7 +10,7 @@ function AboutImage (props) {
         <a href=''>
           <FaEnvelope />
         </a>
-        <a href=''>
+        <a href={props.facebook}>
           <FaFacebook />
         </a>
       </div>

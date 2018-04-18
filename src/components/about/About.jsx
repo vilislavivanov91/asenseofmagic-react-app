@@ -8,7 +8,7 @@ const image = {
   name: 'About Image',
   src: imageAbout
 }
-
+const facebook = 'https://www.facebook.com/profile.php?id=100008222798165&fref=hovercard&hc_location=chat'
 const info = {
   title: 'Some heading text inside the about me',
   text: `I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
@@ -26,7 +26,7 @@ function About (props) {
     <div className='about-wrapper container'>
       <h1>About me</h1>
       <div className='about-me'>
-        <AboutImage image={image} />
+        <AboutImage image={image} facebook={facebook} />
         <AboutInfo info={info} />
       </div>
     </div>
