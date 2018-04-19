@@ -9,8 +9,8 @@
   letter-spacing: 10px;
   padding-bottom: 15px;
   padding-top: 15px;
-  color: #eef4cc;
-  background-color: rgb(18, 49, 50);
+  color: #979f83;
+  background-color: #12284b;
   /* Same as contact-me h1 */
 }
 
@@ -65,7 +65,7 @@
 }
 
 .icon-wrapper:hover {
-  background-color: #c1cc00;
+  background-color: #979f83;
 }
 
 .product-icon {
@@ -91,9 +91,9 @@
 .product-info-wrapper button {
   margin-top: 20px;
   color: #eef4cc;
-  background-color: #c1cc00;
+  background-color: #979f83;
   font-size: 1.1em;
-  border-radius: 20px;
+  border-radius: 2px;
   border: none;
   padding: 10px 20px;
   align-self: center;
@@ -101,7 +101,7 @@
 }
 
 .product-info-wrapper button:hover {
-  background-color: #a2aa05;
+  background-color: #6c7c44;
   cursor: pointer;
 }
 

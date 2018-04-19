@@ -14,10 +14,14 @@ function FooterSecondary (props) {
         <FaEnvelope />
         <p>{props.email}</p>
       </a>
-      <a href=''>
+      <a href='' className='phone'>
         <FaPhone />
         <p>{props.phone}</p>
       </a>
+      <div className='footer-text'>
+        <p>&copy;WebSite.com</p>
+        <p>&copy;Created by VI.</p>
+      </div>
     </div>
   )
 }

@@ -4,8 +4,8 @@
     letter-spacing: 10px;
     padding-bottom: 15px;
     padding-top: 15px;
-    color: #eef4cc;
-    background-color: rgb(18, 49, 50);
+    color: #979f83;
+    background-color: #12284b;
 }
 
 .contact-me {
@@ -56,16 +56,16 @@
 
 .contact-form input {
     height: 30px;
-    border: 2px solid #B97F6D;
+    border: 2px solid #979f83;
 }
 
 .contact-form textarea {
     margin-bottom: 20px;
-    border: 2px solid #B97F6D;
+    border: 2px solid #979f83;
 }
 
 .contact-form input[type="submit"] {
-    background-color: #B97F6D;
+    background-color:#979f83;
     color: #eef4cc;
     transition: all .4s ease-in-out;
     height: 40px;
@@ -76,47 +76,47 @@
 .contact-form input[type="submit"]:hover {
     cursor: pointer;
     color: #eef4cc;
-    background-color: rgb(161, 102, 84);
-    border: rgb(161, 102, 84);
+    background-color: #677447;
+    border: #979f83;
 }
 
 .contact-form input::-webkit-input-placeholder {
-    color: #B97F6D;
+    color: #979f83;
     padding-left: 10px;
 }
 
 .contact-form input::-moz-placeholder {
-    color: #B97F6D;
+    color: #979f83;
     padding-left: 10px;
 }
 
 .contact-form input:-ms-input-placeholder {
-    color: #B97F6D;
+    color: #979f83;
     padding-left: 10px;
 }
 
 .contact-form input:-moz-placeholder {
-    color: #B97F6D;
+    color: #979f83;
     padding-left: 10px;
 }
 
 .contact-form textarea::-webkit-input-placeholder {
-    color: #B97F6D;
+    color: #979f83;
     padding-left: 10px;
 }
 
 .contact-form textarea::-moz-placeholder {
-    color: #B97F6D;
+    color: #979f83;
     padding-left: 10px;
 }
 
 .contact-form textarea:-ms-input-placeholder {
-    color: #B97F6D;
+    color: #979f83;
     padding-left: 10px;
 }
 
 .contact-form textarea:-moz-placeholder {
-    color: #B97F6D;
+    color: #979f83;
     padding-left: 10px;
 }
 

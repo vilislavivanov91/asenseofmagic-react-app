@@ -1,7 +1,7 @@
 .navigation {
   position: fixed;
   width: 100%;
-  background: rgb(18, 49, 50);
+  background-color: #12284b;
   display: flex;
   flex-wrap: wrap;
   color: #eef4cc;
@@ -16,18 +16,20 @@
   text-decoration: none;
   border-left: 1px solid #eef4cc;
   width: 100%;
-  padding: 10px auto;
+  padding: 15px auto;
+  margin: 20px auto;
   text-align: center;
   transition: all .3s ease-in;
 }
 
 .navigation a:hover {
   background-color: #eef4cc;
-  color: black;
+  color: #12284b
 }
 
 .navigation-logo {
   padding-left: 20px;
+  align-self: center;
 }
 
 .navigation-main {
@@ -43,6 +45,8 @@
 
 .navigation-main svg {
   margin-right: 15px;
+  font-size: 1.5em;
+  padding: 5px;
 }
 
 .navigation-secondary {

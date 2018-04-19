@@ -1,6 +1,6 @@
 import React from 'react'
 import FontAwesome from '@fortawesome/react-fontawesome'
-import faSearchPlus from '@fortawesome/fontawesome-free-solid/faSearchPlus'
+import faInfoCircle from '@fortawesome/fontawesome-free-solid/faInfoCircle'
 import faShoppingCart from '@fortawesome/fontawesome-free-solid/faShoppingCart'
 
 function ProductHovered (props) {
@@ -9,7 +9,7 @@ function ProductHovered (props) {
       <div className='product-icon-wrapper hidden'>
         <a href=''>
           <div className='product-plus-icon icon-wrapper'>
-            <FontAwesome className='product-icon' icon={faSearchPlus} />
+            <FontAwesome className='product-icon' icon={faInfoCircle} />
           </div>
         </a>
 

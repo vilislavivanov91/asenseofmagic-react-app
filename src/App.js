@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navigation from './components/navigation/Navigation'
 import Header from './components/header/Header'
 import RandomProducts from './components/random-store/RandomProducts'
 import BackgroundImage from './components/background-image/BackgroundImage'
@@ -10,6 +11,7 @@ class App extends Component {
   render () {
     return (
       <div >
+        <Navigation />
         <Header />
         <RandomProducts />
         <BackgroundImage />

@@ -40,10 +40,6 @@ class FooterMain extends Component {
               value='Subscribe' />
           </form>
         </div>
-        <div className='footer-text'>
-          <p>&copy;WebSite.com</p>
-          <p>&copy;Created by VI.</p>
-        </div>
       </div>
     )
   }
