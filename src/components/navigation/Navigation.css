@@ -27,6 +27,12 @@
   color: #12284b
 }
 
+.navigation svg {
+  margin-right: 15px;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
 .navigation-logo {
   padding-left: 20px;
   align-self: center;
@@ -35,33 +41,70 @@
 .navigation-main {
   display: flex;
   align-items: center;
-  flex: 2 2 auto;
+  flex: 0 2 50%;
   justify-content: space-around;
 }
+
 
 .navigation-main a:first-of-type {
   border: none;
 }
 
-.navigation-main svg {
-  margin-right: 15px;
-  font-size: 1.5em;
-  padding: 5px;
-}
-
 .navigation-secondary {
+}
+
+.navigation-secondary a {
+  border: none;
+  position: relative;
+}
+
+.navigation-secondary a:hover {
+  background-color: transparent;
+  color: #eef4cc;
+  cursor: auto;
+}
+
+.cart {
   display: flex;
-  align-items: center;
-  flex: 1 1 auto;
-  justify-content: space-around;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  text-align: end;
 }
 
-.dropdown-menu {
-  display: none;
+.navigation-secondary svg {
+  margin: 0;
 }
 
-.activate-dropdown {
-  display: none;
+.cart-total {
+  font-size: .8em;
+  margin-right: 15px;
+  align-self: flex-end;
+}
+
+.cart-total h3,
+.cart-total p {
+  margin: 0
+}
+
+.cart-total p {
+  padding-left: 10px;
+}
+
+.drop-down-products {
+  padding-top: 50px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #12284b;
+  background-color: #12284bb2;
+  position: absolute;
+  left: -100px;
+  font-size: .8em;
+}
+
+.item-in-cart{
+  margin-right: 10px;
+  font-size: .8em;
 }
 
 @media (max-width: 550px) {
