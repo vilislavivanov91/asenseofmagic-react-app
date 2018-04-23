@@ -1,18 +1,19 @@
 import React from 'react'
+import { Card, CardText, CardTitle, Button } from 'reactstrap'
 
 function ProductInfo (props) {
   return (
-    <div className='product-info-wrapper'>
-      <div className='product-info'>
+    <Card body className='text-center'>
+      <CardTitle>
         <h3>
-          <a href=''>
-            {props.name}
-          </a>
+          {props.name}
         </h3>
-        <p>{props.price} лв.</p>
-      </div>
-      <button>Read More</button>
-    </div>
+        <CardText>
+          <p>Цена: {props.price} лв.</p>
+        </CardText>
+      </CardTitle>
+      <Button outline color='info' size='sm'>Read More</Button>
+    </Card>
   )
 }
 

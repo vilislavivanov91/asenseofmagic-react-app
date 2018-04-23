@@ -3,6 +3,7 @@ import './RandomProducts.css'
 import Product from './Product'
 import ProductInfo from './ProductInfo'
 import photo from './galina-n-200668-unsplash.jpg'
+import { Row, Col } from 'reactstrap'
 
 let image = {
   name: 'testName',
@@ -19,19 +20,19 @@ const products = [
 function RandomProducts (props) {
   const productsElement = products.map(p => {
     return (
-      <div key={p.id}>
-        <Product image={p.image} />
+      <Col sm={6} key={p.id} className='my-4'>
+        <Product image={p.image} title={p.name} />
         <ProductInfo name={p.name} price={p.price} />
-      </div>
+      </Col>
     )
   })
 
   return (
-    <div className='container-product container'>
-      <h1>Shop Now</h1>
-      <div className='random-products'>
+    <div>
+      <h1 className='random-store-header my-3 py-3'>Shop Now</h1>
+      <Row>
         {productsElement}
-      </div>
+      </Row>
     </div>
   )
 }

@@ -6,19 +6,24 @@ import BackgroundImage from './components/background-image/BackgroundImage'
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
+import { Container } from 'reactstrap'
 
 class App extends Component {
   render () {
     return (
-      <div >
+      <div>
         <Navigation />
         <Header />
-        <RandomProducts />
+        <Container>
+          <RandomProducts />
+        </Container>
         <BackgroundImage />
-        <About />
-        <Contact />
-        <Footer />
+        <Container>
+          <About />
+          <Contact />
         Hello World!
+        </Container>
+        <Footer />
       </div>
     )
   }

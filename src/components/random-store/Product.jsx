@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ProductHovered from './ProductHovered'
+import './Product.css'
 
 class Product extends Component {
   constructor (props) {
@@ -9,29 +9,18 @@ class Product extends Component {
       hovered: false
     }
     // Bind Handlers
-    this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
-    this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this)
-  }
-
-  onMouseLeaveHandler () {
-    this.setState({
-      hovered: false
-    })
-  }
-
-  onMouseEnterHandler () {
-    this.setState({
-      hovered: true
-    })
   }
 
   render () {
-    const hoveredProduct = <ProductHovered />
-
     return (
-      <div className='product' onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
-        <img src={this.props.image.src} alt={this.props.image.name} />
-        { this.state.hovered ? hoveredProduct : null }
+      <div>
+        <div className='hovereffect'>
+          <img className='img-responsive img-fluid' src={this.props.image.src} alt={this.props.image.name} />
+          <div className='overlay'>
+            <h2>{this.props.title}</h2>
+            <a className='info' href='#'>link here</a>
+          </div>
+        </div>
       </div>
     )
   }
