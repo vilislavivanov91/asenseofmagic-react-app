@@ -21,7 +21,6 @@ class App extends Component {
         <Container>
           <About />
           <Contact />
-        Hello World!
         </Container>
         <Footer />
       </div>

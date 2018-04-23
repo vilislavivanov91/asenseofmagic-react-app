@@ -1,18 +1,19 @@
 import React from 'react'
-import ContactInfo from './ContactInfo'
 import ContactForm from './ContactForm'
+import ContactInfo from './ContactInfo'
 import './Contact.css'
+import { Row } from 'reactstrap'
 
 const facebook = 'https://www.facebook.com/profile.php?id=100008222798165&fref=hovercard&hc_location=chat'
 
 function Contact (props) {
   return (
-    <div className='contact-wrapper container'>
-      <h1>Contact</h1>
-      <div className='contact-me'>
-        <ContactInfo facebook={facebook} phone='+359 897 02 10 32' email='email@address.com' />
+    <div className='mb-5'>
+      <h1 className='contact-header'>Contact</h1>
+      <Row>
         <ContactForm />
-      </div>
+        <ContactInfo facebook={facebook} phone='+359 897 02 10 32' email='email@address.com' />
+      </Row>
     </div>
   )
 }

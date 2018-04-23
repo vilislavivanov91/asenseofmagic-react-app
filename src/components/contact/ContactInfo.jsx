@@ -1,27 +1,23 @@
 import React from 'react'
-import FaFacebook from 'react-icons/lib/fa/facebook'
+import { Row, Col } from 'reactstrap'
+import { IoAndroidCall, IoEmail } from 'react-icons/lib/io'
 
 function ContactInfo (props) {
   return (
-    <div className='contact-info'>
-      <div className='contact-facebook'>
-        <h2>Facebook</h2>
-        <p>
-          <a href={props.facebook}>
-            <FaFacebook id='fb-icon-contact' />
-            Facebook Page
-          </a>
-        </p>
-      </div>
-      <div className='contact-phone'>
-        <h2>Phone Number</h2>
-        <p>{props.phone}</p>
-      </div>
-      <div className='contact-email'>
-        <h2>Email Address</h2>
-        <p>{props.email}</p>
-      </div>
-    </div>
+    <Col sm={3} className='align-self-center offset-sm-1'>
+      <Row className='mb-2'>
+        <Col sm={4} className='h4'>
+          <IoAndroidCall />
+        </Col>
+        <Col sm={8}>{props.phone}</Col>
+      </Row>
+      <Row>
+        <Col sm={4} className='h4'>
+          <IoEmail />
+        </Col>
+        <Col sm={8}>{props.email}</Col>
+      </Row>
+    </Col>
   )
 }
 

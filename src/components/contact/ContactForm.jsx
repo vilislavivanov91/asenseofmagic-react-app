@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { IoAt, IoPerson, IoEdit, IoClipboard } from 'react-icons/lib/io'
+import { Col, Form, FormGroup, Button } from 'reactstrap'
 
 class ContactForm extends Component {
   constructor (props) {
@@ -33,34 +35,51 @@ class ContactForm extends Component {
 
   render () {
     return (
-      <div className='contact-form'>
-        <form onSubmit={this.handleSubmit}>
-          <div className='form-info'>
-            <input
-              onChange={this.handleInputchange}
-              type='text'
-              placeholder='Name*'
-              name='name'
-              id='contact-name' />
-            <input
-              type='email'
-              placeholder='Email*'
-              name='email'
-              id='contact-email' />
-          </div>
-          <input
-            type='text'
-            placeholder='Subject'
-            name='subject'
-            id='contact-subject' />
-          <textarea
-            name='message'
-            id='contact-message'
-            placeholder='Message'
-            cols='60' rows='10' />
-          <input type='submit' value='Send' />
-        </form>
-      </div>
+      <Col sm={8} className='mt-5'>
+        <Form>
+          <FormGroup>
+            <div className='input-group mb-2'>
+              <div className='input-group-prepend'>
+                <div className='input-group-text'>
+                  <IoAt />
+                </div>
+              </div>
+              <input type='text' required className='form-control' placeholder='Email' />
+            </div>
+          </FormGroup>
+          <FormGroup>
+            <div className='input-group mb-2'>
+              <div className='input-group-prepend'>
+                <div className='input-group-text'>
+                  <IoPerson />
+                </div>
+              </div>
+              <input type='text' className='form-control' placeholder='Username' />
+            </div>
+          </FormGroup>
+          <FormGroup>
+            <div className='input-group mb-2'>
+              <div className='input-group-prepend'>
+                <div className='input-group-text'>
+                  <IoEdit />
+                </div>
+              </div>
+              <input type='text' className='form-control' placeholder='Subject' />
+            </div>
+          </FormGroup>
+          <FormGroup>
+            <div className='input-group mb-2'>
+              <div className='input-group-prepend'>
+                <div className='input-group-text'>
+                  <IoClipboard />
+                </div>
+              </div>
+              <textarea type='text' className='form-control' rows={5} placeholder='Message' />
+            </div>
+          </FormGroup>
+          <Button outline color='info' block>Submit</Button>
+        </Form>
+      </Col>
     )
   }
 }
