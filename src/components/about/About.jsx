@@ -3,6 +3,7 @@ import './About.css'
 import AboutImage from './AboutImage'
 import AboutInfo from './AboutInfo'
 import imageAbout from './16807332_1881113875506021_3542516985789299623_n.jpg'
+import { Row } from 'reactstrap'
 
 const image = {
   name: 'About Image',
@@ -23,12 +24,12 @@ const info = {
 
 function About (props) {
   return (
-    <div className='about-wrapper container'>
-      <h1>About me</h1>
-      <div className='about-me'>
+    <div>
+      <h1 className='about-header'>About me</h1>
+      <Row className='justify-content-center my-5'>
         <AboutImage image={image} facebook={facebook} />
         <AboutInfo info={info} />
-      </div>
+      </Row>
     </div>
   )
 }

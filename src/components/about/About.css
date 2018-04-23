@@ -1,4 +1,4 @@
-.about-wrapper h1 {
+.about-header {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 10px;
@@ -7,62 +7,4 @@
   color: #979f83;
   background-color: #12284b;
   /* Same as contact-me h1 */
-}
-
-.about-me {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  /* overflow: auto; */
-}
-
-.about-image {
-  max-width: 400px;
-  /* float: left; */
-  margin: 0 70px 30px 30px;
-  flex: 1 2 auto;
-}
-
-.about-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 30px;
-}
-
-.about-contact {
-  display: flex;
-  justify-content: space-around;
-  border: 1px solid rgba(0, 0, 0, .2);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  border-top: none;
-}
-
-#fb-icon-about {
-  color: #3b5998;
-}
-
-.about-contact a:last-child {
-  color: #666666;
-}
-
-.about-contact svg {
-  font-size: 2em;
-}
-
-.about-info {
-  max-width: 400px;
-  margin: 10px;
-  color: #666666;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.about-info h2 {
-  align-self: flex-end;
-}
-
-.about-info p {
-  margin-bottom: 0;
-  /* line-height: 40px; */
 }

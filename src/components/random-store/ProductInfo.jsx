@@ -5,11 +5,9 @@ function ProductInfo (props) {
   return (
     <Card body className='text-center'>
       <CardTitle>
-        <h3>
-          {props.name}
-        </h3>
+        {props.name}
         <CardText>
-          <p>Цена: {props.price} лв.</p>
+          Цена: {props.price} лв.
         </CardText>
       </CardTitle>
       <Button outline color='info' size='sm'>Read More</Button>
