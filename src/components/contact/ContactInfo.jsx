@@ -4,7 +4,7 @@ import { IoAndroidCall, IoEmail } from 'react-icons/lib/io'
 
 function ContactInfo (props) {
   return (
-    <Col sm={3} className='align-self-center offset-sm-1'>
+    <Col sm={4} className='align-self-center'>
       <Row className='mb-2'>
         <Col sm={4} className='h4'>
           <IoAndroidCall />

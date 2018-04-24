@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Col, Form, FormGroup, Button } from 'reactstrap'
+import { IoAt } from 'react-icons/lib/io'
 
 class FooterMain extends Component {
   constructor (props) {
@@ -27,20 +29,26 @@ class FooterMain extends Component {
 
   render () {
     return (
-      <div className='footer-main'>
-        <div className='footer-form'>
-          <h1>Subscribe</h1>
-          <form onSubmit={this.onSubscribeHandler}>
-            <input
-              type='email'
-              required placeholder='Enter your email'
-              onChange={this.onChangeHandler} />
-            <input
-              type='submit'
-              value='Subscribe' />
-          </form>
+      <Col sm={7} md={6}>
+        <div>
+          <p className='text-light text-center mb-0'>Искаш първи да разбереш като кача нов продукт?</p>
+          <p className='text-light text-center small'>Испрати email и ще получиш известие щом кача нещо ново</p>
+          <Form inline className='justify-content-center'>
+            <FormGroup>
+              <div className='input-group'>
+                <div className='input-group-prepend mb-sm-0 mb-1'>
+                  <div className='input-group-text'>
+                    <IoAt />
+                  </div>
+                </div>
+                <input type='text' required className='form-control mr-3 mb-sm-0 mb-1' placeholder='Email' />
+              </div>
+              {/* <Input type='email' required placeholder='Enter your email' className='mr-3 mb-sm-0 mb-1' /> */}
+              <Button color='danger'>Абонирай се!</Button>
+            </FormGroup>
+          </Form>
         </div>
-      </div>
+      </Col>
     )
   }
 }

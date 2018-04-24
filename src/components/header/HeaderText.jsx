@@ -3,8 +3,8 @@ import React from 'react'
 function HeaderText (props) {
   return (
     <div className='header-text-wrapper'>
-      <hr />
-      <hr />
+      <hr className='bg-light' />
+      <hr className='bg-light' />
       <div className='header-text'>
         <h1>{props.title}</h1>
         <h2>{props.subtitle}</h2>
@@ -16,8 +16,8 @@ function HeaderText (props) {
         </div>
         <a href='store'>Shop Now</a>
       </div>
-      <hr />
-      <hr />
+      <hr className='bg-light' />
+      <hr className='bg-light' />
     </div>
   )
 }

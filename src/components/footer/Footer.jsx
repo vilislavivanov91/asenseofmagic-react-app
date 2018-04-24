@@ -1,21 +1,29 @@
 import React from 'react'
 import './Footer.css'
 import FooterLogo from './FooterLogo'
+import FooterSocial from './FooterSocial'
 import FooterMain from './FooterMain'
-import FooterSecondary from './FooterSecondary'
+import { Row, Col } from 'reactstrap'
+import { IoSocialFacebook, IoSocialTwitter } from 'react-icons/lib/io'
 
-const facebook = 'https://www.facebook.com/Polya-Radeva-Art-of-Paper-706745186052055/'
-const email = 'email.address@abv.bg'
-const phoneNumber = '+359 899 31 13 32'
+const social = [
+  { icon: IoSocialFacebook, id: 1, link: '/fb' },
+  { icon: IoSocialTwitter, id: 2, link: '/tw' }
+]
 
 function Footer (props) {
   return (
-    <footer>
-      <div className='footer-wrapper'>
+    <footer className='pt-3'>
+      <Row className='pb-2'>
         <FooterLogo />
+        <FooterSocial socialLinks={social} />
         <FooterMain />
-        <FooterSecondary facebook={facebook} email={email} phone={phoneNumber} />
-      </div>
+      </Row>
+      <hr className='bg-light' />
+      <Row className='pb-2 text-light'>
+        <Col className='text-center text-danger'>&copy;WebSite.com</Col>
+        <Col className='text-center text-danger'>&copy;Created by VI.</Col>
+      </Row>
     </footer>
   )
 }

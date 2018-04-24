@@ -1,12 +1,11 @@
 import React from 'react'
+import { Col } from 'reactstrap'
 
 function FooterLogo (props) {
   return (
-    <div className='footer-logo'>
-      <a href='#'>
-        <h2>Some Logo Here</h2>
-      </a>
-    </div>
+    <Col md={4} sm={3} className='text-light text-center align-self-center'>
+      <h4>Some Logo Here</h4>
+    </Col>
   )
 }
 
