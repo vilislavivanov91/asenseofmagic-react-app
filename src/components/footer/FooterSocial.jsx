@@ -1,5 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
+import './FooterSocial.css'
 
 function FooterSocial (props) {
   const socialLinks = props.socialLinks

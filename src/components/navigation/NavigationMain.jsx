@@ -1,30 +1,33 @@
 import React from 'react'
-import faHome from 'react-icons/lib/fa/home'
-import faInfo from 'react-icons/lib/fa/info'
-import faShippingFast from 'react-icons/lib/fa/shopping-bag'
-import faEnvelope from 'react-icons/lib/fa/envelope'
+import { Nav, NavItem, NavLink } from 'reactstrap'
+import { IoHome, IoInformation, IoBag, IoEmail } from 'react-icons/lib/io'
+import './NavigationMain.css'
 
 const links = [
-  { name: 'Home', icon: faHome, id: 1, href: '#home' },
-  { name: 'About', icon: faInfo, id: 2, href: '#about' },
-  { name: 'Shop', icon: faShippingFast, id: 3, href: '#shop' },
-  { name: 'Contact', icon: faEnvelope, id: 4, href: '#contact' }
+  { name: 'Home', icon: IoHome, id: 1, href: '#home', active: true },
+  { name: 'About', icon: IoInformation, id: 2, href: '#about', active: false },
+  { name: 'Shop', icon: IoBag, id: 3, href: '#shop', active: false },
+  { name: 'Contact', icon: IoEmail, id: 4, href: '#contact', active: false }
 ]
 
 function NavigationMain (props) {
   const linkElements = links.map(l => {
-    const IconElem = l.icon
+    const IconElement = l.icon
     return (
-      <a key={l.id} href={l.href}>
-        <IconElem />
-        {l.name}
-      </a>
+      <NavItem className='navigation-tabs' key={l.id}>
+        <NavLink active={l.active} className='text-dark' href={l.href}>
+          <IconElement className='h3 mr-1 pt-1' />
+          {l.name}
+        </NavLink>
+      </NavItem>
     )
   })
 
   return (
     <div className='navigation-main'>
-      {linkElements}
+      <Nav tabs>
+        {linkElements}
+      </Nav>
     </div>
   )
 }
