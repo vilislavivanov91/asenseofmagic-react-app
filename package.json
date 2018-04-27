@@ -12,12 +12,18 @@
     "react-fontawesome": "^1.6.1",
     "react-icons": "^2.2.7",
     "react-scripts": "1.1.4",
+    "react-star-ratings": "2.2.0",
     "reactstrap": "5.0.0-beta.3"
   },
   "scripts": {
+    "build-css": "less-watch-compiler --run-once --main-file=index.less src/less/ src/less/",
+    "watch-css": "npm run build-css && less-watch-compiler --main-file=index.less src/less/ src/less/",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "less-watch-compiler": "^1.11.2"
   }
 }

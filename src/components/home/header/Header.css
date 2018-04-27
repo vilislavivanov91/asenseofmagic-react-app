@@ -1,0 +1,120 @@
+.image-header {
+  width: 100%;
+  min-height: 700px;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("../../../images/ian-dooley-407846-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 40%;
+  display: inline-block;
+}
+
+.header-text-wrapper {
+  margin: 120px 100px;
+  display: block;
+}
+
+.header-text {
+  margin: 0;
+  color: #eef4cc;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.header-text-wrapper hr {
+  margin: 7px auto;
+}
+
+.header-text-wrapper hr:last-of-type {
+  margin-top: 0;
+}
+
+.header-text-wrapper hr:first-of-type {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.header-text h1 {
+  font-size: 3em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.header-text a {
+  font-size: 1.2em;
+  align-self: flex-end;
+  margin: 25px 90px 15px auto;
+  padding: 0 30px;
+  text-decoration: none;
+  color: #eef4cc;
+  border: 1px solid #eef4cc;
+  transition: all .3s ease;
+}
+
+.header-text a:hover {
+  box-shadow: 0 0 5px #fff;
+  cursor: pointer;
+}
+
+.quotes blockquote {
+  font-family: 'Copse', serif; 
+  text-align: start;
+  margin: 50px auto 80px auto;
+  line-height: 1.3em;
+  font-size: 1.6em;
+  position: relative;
+}
+
+blockquote cite {
+  color: rgba(255, 255, 255, .4);
+  display: block;
+  font-size: .7em;
+  position: absolute;
+  bottom: -2.5em;
+}
+
+blockquote::before {
+  content: "\201C";
+  font-size: 4.2em;
+  color: rgba(255, 255, 255, .4);
+  position: absolute;
+  left: -46px;
+  top: 15px;
+}
+
+blockquote::after {
+  content: "\201D";
+  position: absolute;
+  font-size: 4.2em;
+  bottom: -36px;
+  color: rgba(255, 255, 255, .4);
+}
+
+@media (max-width: 900px) {
+  .header-text-wrapper {
+      margin: 120px 50px;
+  }
+  .header-text p {
+      margin: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .header-text-wrapper {
+      margin: 150px 30px 0 40px;
+  }
+  .header-text h1 {
+      display: inline-block;
+      margin: 0;
+  }
+  .header-text p {
+      margin: 0;
+  }
+  .header-text a {
+      margin-right: 20px;
+  }
+}

@@ -1,0 +1,19 @@
+.secondary-images img:hover {
+  box-shadow: 0 0 5px rgb(3, 12, 146);
+}
+.similar-product-card {
+  box-shadow: 0 0 4px rgb(14, 21, 129);
+  position: relative;
+}
+
+.similar-product-card:hover {
+  box-shadow: 0 0 4px rgb(202, 54, 28);
+  position: relative;
+}
+
+.not-available {
+  position: absolute;
+  background: rgba(255, 0, 0, 0.418);
+  top: 30px;
+  left: 0;
+}

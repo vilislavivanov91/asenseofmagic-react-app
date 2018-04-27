@@ -6,7 +6,7 @@ import './NavigationMain.css'
 const links = [
   { name: 'Home', icon: IoHome, id: 1, href: '#home', active: true },
   { name: 'About', icon: IoInformation, id: 2, href: '#about', active: false },
-  { name: 'Shop', icon: IoBag, id: 3, href: '#shop', active: false },
+  { name: 'Shop', icon: IoBag, id: 3, href: '/shop', active: false },
   { name: 'Contact', icon: IoEmail, id: 4, href: '#contact', active: false }
 ]
 
