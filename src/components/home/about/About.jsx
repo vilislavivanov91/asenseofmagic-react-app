@@ -24,7 +24,7 @@ const info = {
 
 function About (props) {
   return (
-    <div>
+    <div id='about'>
       <h1 className='about-header'>About me</h1>
       <Row className='justify-content-center my-5'>
         <AboutImage image={image} facebook={facebook} />

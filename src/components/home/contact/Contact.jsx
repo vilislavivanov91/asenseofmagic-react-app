@@ -8,7 +8,7 @@ const facebook = 'https://www.facebook.com/profile.php?id=100008222798165&fref=h
 
 function Contact (props) {
   return (
-    <div className='mb-5'>
+    <div id='contact' className='mb-5'>
       <h1 className='contact-header'>Contact</h1>
       <Row>
         <ContactForm />
