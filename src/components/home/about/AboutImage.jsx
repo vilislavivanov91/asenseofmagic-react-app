@@ -13,10 +13,10 @@ function AboutImage (props) {
             <CardTitle>Some Title</CardTitle>
             <CardText>Some text inside card body</CardText>
             <Row className='justify-content-around'>
-              <a className='h3 text-warning' href='#'>
+              <a className='h3 text-warning' href='#contact'>
                 <FaEnvelope />
               </a>
-              <a className='h3 text-primary' href='#'>
+              <a className='h3 text-primary' href='https://www.facebook.com/profile.php?id=100008222798165'>
                 <FaFacebook />
               </a>
             </Row>

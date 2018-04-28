@@ -2,6 +2,7 @@ import React from 'react'
 import NavigationMain from './NavigationMain'
 import NavigationSecondary from './NavigationSecondary'
 import { Navbar, NavbarBrand } from 'reactstrap'
+import { withRouter } from 'react-router-dom'
 
 function Navigation (props) {
   return (
@@ -14,5 +15,7 @@ function Navigation (props) {
     </div>
   )
 }
+
+withRouter(Navigation)
 
 export default Navigation

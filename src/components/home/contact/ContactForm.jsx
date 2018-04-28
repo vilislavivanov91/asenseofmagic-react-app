@@ -16,6 +16,7 @@ class ContactForm extends Component {
     // Bind Handlers
     this.handleInputchange = this.handleInputchange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.onClickHandler = this.onClickHandler.bind(this)
   }
 
   handleSubmit (e) {
@@ -31,6 +32,10 @@ class ContactForm extends Component {
     this.setState({
       [propName]: value
     })
+  }
+
+  onClickHandler () {
+
   }
 
   render () {
@@ -77,7 +82,7 @@ class ContactForm extends Component {
               <textarea type='text' className='form-control' rows={5} placeholder='Message' />
             </div>
           </FormGroup>
-          <Button outline color='info' block>Submit</Button>
+          <Button onClick={this.onClickHandler} outline color='info' block>Submit</Button>
         </Form>
       </Col>
     )

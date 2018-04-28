@@ -1,14 +1,16 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Home from './components/home/Home'
 import Store from './components/store/Store'
 
-function Routes (props) {
+function Routes (props, context) {
   return (
-    <div>
-      <Route exact path='/' component={Home} />
+    <Switch>
+      <Route exact path='/' render={() => (<Redirect to='/home' />)} />
+      <Route path='/home' component={Home} />
       <Route path='/store' component={Store} />
-    </div>
+      <Route path='#about' component={Store} />
+    </Switch>
   )
 }
 

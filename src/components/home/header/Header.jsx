@@ -10,7 +10,7 @@ const quote = {
 class ImageHeader extends Component {
   render () {
     return (
-      <header>
+      <header id='home'>
         <div className='image-header'>
           <HeaderText title='A Sense Of Magic' subtitle='some text' quote={quote} />
         </div>
