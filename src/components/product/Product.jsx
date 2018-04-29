@@ -17,19 +17,21 @@ class Product extends Component {
   }
   render () {
     return (
-      <Container id='top' style={{marginTop: '150px'}}>
-        <Row>
-          <Col lg={6} xs={12}>
-            <ProductImages mainImage={mainImage} />
-          </Col>
-          <Col lg={6} xs={12}>
-            <ProductInfo />
-          </Col>
-        </Row>
-        <hr className='my-5' />
-        <SimilarProducts />
-        <ReviewSection />
-      </Container>
+      <div >
+        <Container id='top'>
+          <Row >
+            <Col lg={6} xs={12}>
+              <ProductImages mainImage={mainImage} />
+            </Col>
+            <Col lg={6} xs={12}>
+              <ProductInfo />
+            </Col>
+          </Row>
+          <hr className='my-5' />
+          <SimilarProducts />
+          <ReviewSection />
+        </Container>
+      </div>
     )
   }
 }

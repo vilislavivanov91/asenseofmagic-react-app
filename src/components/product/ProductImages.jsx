@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 
 function ProductImages (props) {
   return (
-    <div className=''>
+    <div className='product-wrapper'>
       <Col className='my-3 p-0'>
         <img className='img-fluid img-thumbnail' src={props.mainImage.src} alt={props.mainImage.alt} />
       </Col>

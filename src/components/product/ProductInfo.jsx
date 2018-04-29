@@ -56,7 +56,7 @@ class ProductInfo extends Component {
   render () {
     const GRADE = (this.state.countRate === 1) ? ('оценка ') : ('оценки')
     return (
-      <div>
+      <div className='product-wrapper'>
         <h3 className='text-center'>Име на продукта</h3>
         <div className='text-center'>
           <p className='d-inline-block mr-3'>Цена:</p>

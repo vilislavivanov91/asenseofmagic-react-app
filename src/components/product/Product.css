@@ -1,3 +1,7 @@
+.product-wrapper {
+  margin-top: 120px;
+}
+
 .secondary-images img:hover {
   box-shadow: 0 0 5px rgb(3, 12, 146);
 }
