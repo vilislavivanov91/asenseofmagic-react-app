@@ -14,7 +14,7 @@ const links = [
 function NavigationMain (props) {
   const linkElements = links.map(l => {
     const IconElement = l.icon
-    let linkClassName = 'nav-link text-dark m-1 p-2'
+    let linkClassName = 'nav-link text-dark'
     linkClassName += l.active ? ' active' : ''
 
     return (

@@ -2,13 +2,8 @@ import React from 'react'
 import './RandomProducts.css'
 import Product from './Product'
 import ProductInfo from './ProductInfo'
-import photo from './galina-n-200668-unsplash.jpg'
+import image from './galina-n-200668-unsplash.jpg'
 import { Row, Col } from 'reactstrap'
-
-let image = {
-  name: 'testName',
-  src: photo
-}
 
 const products = [
   { name: 'First Product', price: 100, image: image, id: 1 },
@@ -17,12 +12,13 @@ const products = [
   { name: 'Fourth Product', price: 150, image: image, id: 4 }
 ]
 
-function RandomProducts (props) {
+function RandomProducts ({match}) {
+  console.log(match)
   const productsElement = products.map(p => {
     return (
       <Col sm={6} key={p.id} className='my-4'>
-        <Product image={p.image} title={p.name} />
-        <ProductInfo name={p.name} price={p.price} />
+        <Product image={p.image} name={p.name} id={p.id} />
+        <ProductInfo name={p.name} price={p.price} id={p.id} />
       </Col>
     )
   })

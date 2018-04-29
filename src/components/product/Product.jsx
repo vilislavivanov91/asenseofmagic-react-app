@@ -5,13 +5,13 @@ import ProductInfo from './ProductInfo'
 import SimilarProducts from './SimilarProducts'
 import ReviewSection from './ReviewSection'
 import img from './galina-n-200668-unsplash.jpg'
-import './Store.css'
+import './Product.css'
 
 const mainImage = {
   src: img, alt: 'imageName'
 }
 
-class Store extends Component {
+class Product extends Component {
   componentDidMount () {
     window.scrollTo(0, 0)
   }
@@ -34,4 +34,4 @@ class Store extends Component {
   }
 }
 
-export default Store
+export default Product

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { IoIosCart } from 'react-icons/lib/io'
-import { Nav, NavItem, NavLink, Form, FormGroup, Input, Button, Badge, Popover, PopoverHeader, PopoverBody } from 'reactstrap'
+import { Nav, Form, FormGroup,
+  Input, Button } from 'reactstrap'
+import CartPopoverMenu from '../cart/CartPopoverMenu'
 
 class NavigationSecondary extends Component {
   constructor (props) {
@@ -12,12 +13,6 @@ class NavigationSecondary extends Component {
     }
 
     // Bind Handlers
-    this.togle = this.togle.bind(this)
-  }
-  togle () {
-    this.setState((prevState) => {
-      return { popoverOpen: !prevState.popoverOpen }
-    })
   }
 
   render () {
@@ -30,23 +25,7 @@ class NavigationSecondary extends Component {
               <Button outline color='info'>Seacrh</Button>
             </FormGroup>
           </Form>
-          <NavItem id='PopoverActivator' onClick={this.togle}>
-            <NavLink href='#'>
-              <IoIosCart className='text-secondary mr-0 h1 mr-1 pt-1' />
-              <Badge color='success' className='ml-0'>
-                {this.state.productsInCart}
-              </Badge>
-            </NavLink>
-          </NavItem>
-          <Popover
-            className='mr-3'
-            placement='bottom'
-            isOpen={this.state.popoverOpen}
-            toggle={this.togle}
-            target='PopoverActivator'>
-            <PopoverHeader>Some heading text</PopoverHeader>
-            <PopoverBody>Some body</PopoverBody>
-          </Popover>
+          <CartPopoverMenu />
         </Nav>
       </div>
     )

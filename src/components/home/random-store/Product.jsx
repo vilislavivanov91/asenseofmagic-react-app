@@ -12,13 +12,14 @@ class Product extends Component {
   }
 
   render () {
+    const link = 'product/' + this.props.id
     return (
       <div>
         <div className='hovereffect'>
-          <img className='img-responsive img-fluid' src={this.props.image.src} alt={this.props.image.name} />
+          <img className='img-responsive img-fluid' src={this.props.image} alt={this.props.name} />
           <div className='overlay'>
-            <h2>{this.props.title}</h2>
-            <a className='info' href='#'>link here</a>
+            <h2>{this.props.name}</h2>
+            <a className='info' href={link}>link here</a>
           </div>
         </div>
       </div>
