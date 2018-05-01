@@ -16,7 +16,7 @@ class Product extends Component {
     return (
       <div>
         <div className='hovereffect'>
-          <img className='img-responsive img-fluid' src={this.props.image} alt={this.props.name} />
+          <img className='img-responsive img-fluid' src={this.props.src} alt={this.props.name} />
           <div className='overlay'>
             <h2>{this.props.name}</h2>
             <a className='info' href={link}>link here</a>
