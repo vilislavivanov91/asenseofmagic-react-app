@@ -15,7 +15,7 @@ const products = [
 function RandomProducts ({match}) {
   const productsElement = products.map(p => {
     return (
-      <Col sm={6} key={p.id} className='my-4'>
+      <Col sm={6} key={p.id} className='my-4 d-flex flex-column flex-shrink-1'>
         <Product src={p.src} name={p.name} id={p.id} />
         <ProductInfo name={p.name} price={p.price} id={p.id} />
       </Col>

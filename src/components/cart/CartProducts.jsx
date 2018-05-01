@@ -21,7 +21,7 @@ class CartProducts extends Component {
   render () {
     const allProductsInCart = this.state.productsInCart.map(p => {
       return (
-        <CartProduct src={p.src} name={p.name} price={p.price} />
+        <CartProduct key={p.id} src={p.src} name={p.name} price={p.price} />
       )
     })
     return (

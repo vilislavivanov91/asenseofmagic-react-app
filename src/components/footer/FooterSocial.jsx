@@ -5,7 +5,6 @@ import './FooterSocial.css'
 function FooterSocial (props) {
   const socialLinks = props.socialLinks
   const parts = 12 / socialLinks.length
-  console.log(parts)
   const socialLinksElement = socialLinks.map(l => {
     const Icon = l.icon
     return (

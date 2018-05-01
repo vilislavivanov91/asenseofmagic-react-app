@@ -13,14 +13,14 @@ class ProductInfo extends Component {
   }
   render () {
     return (
-      <Card body className='text-center'>
-        <CardTitle>
+      <Card body className='text-center position-relative d-flex flex-column'>
+        <CardTitle className='mb-5'>
           {this.props.name}
           <CardText>
             Цена: {this.props.price} лв.
           </CardText>
         </CardTitle>
-        <Button onClick={this.onClickHandler} outline color='info' size='sm'>Read More</Button>
+        <Button className='card-button' onClick={this.onClickHandler} block outline color='info' size='sm'>Read More</Button>
       </Card>
     )
   }

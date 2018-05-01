@@ -5,6 +5,8 @@ let allProducts = [{
   id: 1,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -14,6 +16,8 @@ let allProducts = [{
   id: 2,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -23,6 +27,8 @@ let allProducts = [{
   id: 3,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 },
@@ -33,6 +39,8 @@ let allProducts = [{
   id: 4,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 },
@@ -43,6 +51,8 @@ let allProducts = [{
   id: 5,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 },
@@ -53,6 +63,8 @@ let allProducts = [{
   id: 6,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -62,6 +74,8 @@ let allProducts = [{
   id: 7,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -71,6 +85,8 @@ let allProducts = [{
   id: 8,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -80,6 +96,8 @@ let allProducts = [{
   id: 9,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -89,6 +107,8 @@ let allProducts = [{
   id: 10,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -98,6 +118,8 @@ let allProducts = [{
   id: 11,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -107,6 +129,8 @@ let allProducts = [{
   id: 12,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -116,6 +140,8 @@ let allProducts = [{
   id: 13,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -125,6 +151,8 @@ let allProducts = [{
   id: 14,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -134,6 +162,8 @@ let allProducts = [{
   id: 15,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -143,6 +173,8 @@ let allProducts = [{
   id: 16,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -152,6 +184,8 @@ let allProducts = [{
   id: 17,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }, {
@@ -161,6 +195,8 @@ let allProducts = [{
   id: 18,
   comments: '',
   rateValue: 0,
+  allRates: 0,
+  avarageRate: 0,
   rateCount: 0,
   available: true
 }
