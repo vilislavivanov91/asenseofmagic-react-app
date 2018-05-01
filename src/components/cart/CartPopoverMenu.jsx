@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import {withRouter} from 'react-router-dom'
 import { IoIosCart } from 'react-icons/lib/io'
 import { Container, Popover, PopoverHeader, PopoverBody, NavItem, NavLink, Badge, Button } from 'reactstrap'
 import CartProductInfo from './CartProductInfo'
+
+const img = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg'
 
 class CartPopoverMenu extends Component {
   constructor (props) {
@@ -9,11 +12,12 @@ class CartPopoverMenu extends Component {
 
     this.state = {
       popoverOpen: false,
-      numbersOfProductInCart: 1
+      numbersOfProductInCart: 3
     }
 
     // Bind Handlers
     this.toggle = this.toggle.bind(this)
+    this.onButtonClickHandler = this.onButtonClickHandler.bind(this)
   }
 
   toggle () {
@@ -23,6 +27,9 @@ class CartPopoverMenu extends Component {
         popoverOpen: !prevState.popoverOpen
       }
     })
+  }
+  onButtonClickHandler () {
+    this.props.history.push('cart')
   }
 
   render () {
@@ -50,9 +57,10 @@ class CartPopoverMenu extends Component {
           </PopoverHeader>
           <PopoverBody>
             <Container fluid>
-              <CartProductInfo />
-              <CartProductInfo />
-              <Button className='my-2' block outline color='info'>Преглед на количката</Button>
+              <CartProductInfo name='First Product' price={49.99} src={img} />
+              <CartProductInfo name='First Product' price={49.99} src={img} />
+              <CartProductInfo name='First Product' price={49.99} src={img} />
+              <Button onClick={this.onButtonClickHandler} className='my-2' block outline color='info'>Преглед на количката</Button>
             </Container>
           </PopoverBody>
         </Popover>
@@ -61,4 +69,4 @@ class CartPopoverMenu extends Component {
   }
 }
 
-export default CartPopoverMenu
+export default withRouter(CartPopoverMenu)
