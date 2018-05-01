@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import { IoIosCart } from 'react-icons/lib/io'
 import { Container, Popover, PopoverHeader, PopoverBody, NavItem, NavLink, Badge, Button } from 'reactstrap'
-import CartProductInfo from './CartProductInfo'
-
-const img = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg'
+import CartProducts from './CartProducts'
 
 class CartPopoverMenu extends Component {
   constructor (props) {
@@ -57,9 +55,7 @@ class CartPopoverMenu extends Component {
           </PopoverHeader>
           <PopoverBody>
             <Container fluid>
-              <CartProductInfo name='First Product' price={49.99} src={img} />
-              <CartProductInfo name='First Product' price={49.99} src={img} />
-              <CartProductInfo name='First Product' price={49.99} src={img} />
+              <CartProducts />
               <Button onClick={this.onButtonClickHandler} className='my-2' block outline color='info'>Преглед на количката</Button>
             </Container>
           </PopoverBody>
