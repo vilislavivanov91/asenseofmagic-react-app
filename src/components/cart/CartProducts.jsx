@@ -19,11 +19,15 @@ class CartProducts extends Component {
   }
 
   render () {
-    const allProductsInCart = this.state.productsInCart.map(p => {
-      return (
-        <CartProduct key={p.id} src={p.src} name={p.name} price={p.price} />
-      )
-    })
+    const allProductsInCart = this.state.productsInCart.length > 0 ? (
+      this.state.productsInCart.map(p => {
+        return (
+          <CartProduct key={p.id} src={p.src} name={p.name} price={p.price} />
+        )
+      })
+    ) : (
+      <div className='text-center'>Кошницата е празна</div>
+    )
     return (
       <div>
         {allProductsInCart}

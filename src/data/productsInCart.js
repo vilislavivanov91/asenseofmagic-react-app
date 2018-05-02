@@ -15,6 +15,13 @@ const Data = {
         allProducts.slice(index, 1)
       }
     })
+  },
+  getProductsPrice: () => {
+    let price = 0
+    Data.getAllProducts().forEach(p => {
+      price += p.price
+    })
+    return price
   }
 }
 

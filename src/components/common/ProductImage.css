@@ -18,6 +18,7 @@
 }
 
 .hovereffect img {
+  width: 100%;
   display: block;
   position: relative;
   -webkit-transition: all 0.4s ease-in;
@@ -86,4 +87,8 @@
 
 .product-img {
   height: 360px;
+}
+
+.similar-product-image {
+  height: 260px;;
 }

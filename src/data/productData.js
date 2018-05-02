@@ -187,7 +187,7 @@ let allProducts = [{
   allRates: 0,
   avarageRate: 0,
   rateCount: 0,
-  available: true
+  available: false
 }, {
   name: 'Shoes',
   price: 89,
@@ -198,7 +198,7 @@ let allProducts = [{
   allRates: 0,
   avarageRate: 0,
   rateCount: 0,
-  available: true
+  available: false
 }
 ]
 

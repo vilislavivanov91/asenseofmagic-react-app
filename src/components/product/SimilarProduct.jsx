@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, CardText, Button } from 'reactstrap'
 import ProductImage from '../common/ProductImage'
-import './SimilarProduct.css'
 
 function SimilarProduct (props) {
   const availabilityElement = props.image.available ? (

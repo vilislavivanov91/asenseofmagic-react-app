@@ -20,7 +20,6 @@ class ProductInfo extends Component {
 
     if (allProductsInCart.indexOf(currentProduct) === -1) {
       productsInCart.addProduct(currentProduct)
-      console.log(currentProduct)
     } else {
       console.log('You already add this product')
     }

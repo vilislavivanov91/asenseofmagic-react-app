@@ -11,7 +11,8 @@ class CartPopoverMenu extends Component {
 
     this.state = {
       popoverOpen: false,
-      numbersOfProductInCart: 0
+      numbersOfProductInCart: 0,
+      totalPrice: 0
     }
 
     // Bind Handlers
@@ -25,10 +26,12 @@ class CartPopoverMenu extends Component {
         popoverOpen: !prevState.popoverOpen
       }
     })
+    this.setPrice()
   }
 
   onButtonClickHandler () {
     this.props.history.push('/cart')
+    this.toggle()
   }
 
   componentDidMount () {
@@ -36,11 +39,19 @@ class CartPopoverMenu extends Component {
     this.setState({
       numbersOfProductInCart
     })
+    this.setPrice()
+  }
+
+  setPrice () {
+    const totalPrice = productsInCartData.getProductsPrice()
+    this.setState({
+      totalPrice
+    })
   }
 
   render () {
     return (
-      <div onClick={this.toggle} >
+      <div>
         <NavItem id='PopoverActivator'>
           <NavLink href='#'>
             <IoIosCart onClick={this.toggle} className='text-secondary mr-0 h1 mr-1 pt-1' />
@@ -53,12 +64,12 @@ class CartPopoverMenu extends Component {
           className='mr-3'
           placement='bottom'
           isOpen={this.state.popoverOpen}
-          toggle={this.togle}
+          toggle={this.toggle}
           target='PopoverActivator'>
           <PopoverHeader>
-            <div className='d-flex flex-row justify-content-between'>
+            <div className='text-center'>
               <h6>Количка за пазаруване</h6>
-              <p>Общо: <span>36.00 лв</span></p>
+              <p>Общо: <span>{this.state.totalPrice} лв</span></p>
             </div>
           </PopoverHeader>
           <PopoverBody>
