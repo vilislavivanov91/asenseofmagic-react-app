@@ -20,11 +20,11 @@ class SimilarProducts extends Component {
   }
 
   render () {
-    const similarProductsElement = this.state.similarProducts.map(i => {
+    const similarProductsElement = this.state.similarProducts.map(p => {
       return (
-        <Col key={i.id} md={3} xs={6}>
+        <Col key={p.id} md={3} xs={6}>
           <div className='mb-4'>
-            <SimilarProduct image={i} />
+            <SimilarProduct product={p} />
           </div>
         </Col>
       )

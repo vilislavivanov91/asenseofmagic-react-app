@@ -13,7 +13,7 @@ class ProductImage extends Component {
 
   onClickHandler (e) {
     e.preventDefault()
-    const link = 'product/' + this.props.id
+    const link = '/product/' + this.props.id
     this.props.history.push(link)
   }
 

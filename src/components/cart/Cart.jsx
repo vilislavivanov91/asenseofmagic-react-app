@@ -6,6 +6,10 @@ import './Cart.css'
 const img = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg'
 
 class Cart extends Component {
+  componentDidMount () {
+    window.scrollTo(0, 0)
+  }
+
   render () {
     return (
       <Container>

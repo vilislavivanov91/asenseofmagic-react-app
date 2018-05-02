@@ -3,7 +3,11 @@ let allProducts = []
 const Data = {
   addProduct: (product) => {
     // Validation
-    allProducts.push(product)
+    if (allProducts.indexOf(product) >= 0) {
+      console.log('You cannot add the same product twice')
+    } else {
+      allProducts.push(product)
+    }
   },
   getAllProducts: () => {
     return allProducts.slice(0)

@@ -11,7 +11,7 @@ class CartPopoverMenu extends Component {
 
     this.state = {
       popoverOpen: false,
-      numbersOfProductInCart: 0,
+      numberOfProducts: 0,
       totalPrice: 0
     }
 
@@ -27,6 +27,7 @@ class CartPopoverMenu extends Component {
       }
     })
     this.setPrice()
+    this.setNumbersOfProducts()
   }
 
   onButtonClickHandler () {
@@ -40,12 +41,20 @@ class CartPopoverMenu extends Component {
       numbersOfProductInCart
     })
     this.setPrice()
+    this.setNumbersOfProducts()
   }
 
   setPrice () {
     const totalPrice = productsInCartData.getProductsPrice()
     this.setState({
       totalPrice
+    })
+  }
+
+  setNumbersOfProducts () {
+    const numberOfProducts = productsInCartData.getAllProducts().length
+    this.setState({
+      numberOfProducts
     })
   }
 
@@ -56,7 +65,7 @@ class CartPopoverMenu extends Component {
           <NavLink href='#'>
             <IoIosCart onClick={this.toggle} className='text-secondary mr-0 h1 mr-1 pt-1' />
             <Badge color='success' className='ml-0'>
-              {this.state.numbersOfProductInCart}
+              {this.state.numberOfProducts}
             </Badge>
           </NavLink>
         </NavItem>
