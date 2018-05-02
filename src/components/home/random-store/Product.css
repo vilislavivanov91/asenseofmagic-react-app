@@ -42,20 +42,21 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-.hovereffect a.info {
+.info {
   display: inline-block;
   text-decoration: none;
   padding: 7px 14px;
   border: 1px solid #fff;
-  margin: 50px 0 0 0;
+  margin: 150px 0 0 0;
   background-color: transparent;
 }
 
-.hovereffect a.info:hover {
+.info:hover {
   box-shadow: 0 0 5px #fff;
+  background: transparent;
 }
 
-.hovereffect a.info, .hovereffect h2 {
+.info, .hovereffect h2 {
   -webkit-transform: scale(0.7);
   -ms-transform: scale(0.7);
   transform: scale(0.7);
@@ -67,7 +68,7 @@
   text-transform: uppercase;
 }
 
-.hovereffect:hover a.info, .hovereffect:hover h2 {
+.hovereffect:hover .info, .hovereffect:hover h2 {
   opacity: 1;
   filter: alpha(opacity=100);
   -webkit-transform: scale(1);
@@ -78,7 +79,11 @@
 .card-button {
   position: absolute;
   margin-top: 5px;
-  bottom: 5px;
+  bottom: 0;
   left: 0;
   right: 0;
+}
+
+.random-img {
+  height: 360px;
 }

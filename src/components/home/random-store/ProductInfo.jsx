@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card, CardText, CardTitle, Button } from 'reactstrap'
 import { withRouter } from 'react-router-dom'
+import productsInCartData from '../../../data/productsInCart'
 
 class ProductInfo extends Component {
   constructor (props) {
@@ -9,18 +10,21 @@ class ProductInfo extends Component {
     this.onClickHandler = this.onClickHandler.bind(this)
   }
   onClickHandler (e) {
-    this.props.history.push(`/product/${this.props.id}`)
+    e.preventDefault()
+    const product = this.props.product
+
+    productsInCartData.addProduct(product)
   }
   render () {
     return (
-      <Card body className='text-center position-relative d-flex flex-column'>
+      <Card body className='text-center'>
         <CardTitle className='mb-5'>
-          {this.props.name}
+          {this.props.product.name}
           <CardText>
-            Цена: {this.props.price} лв.
+            Цена: {this.props.product.price} лв.
           </CardText>
         </CardTitle>
-        <Button className='card-button' onClick={this.onClickHandler} block outline color='info' size='sm'>Read More</Button>
+        <Button className='' onClick={this.onClickHandler} color='info' size='sm'>Добави в количката</Button>
       </Card>
     )
   }

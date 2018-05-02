@@ -15,9 +15,15 @@ class ProductInfo extends Component {
 
   onClickHandler (e) {
     e.preventDefault()
+    const allProductsInCart = productsInCart.getAllProducts()
     const currentProduct = this.props.product
-    productsInCart.addProduct(currentProduct)
-    console.log(currentProduct)
+
+    if (allProductsInCart.indexOf(currentProduct) === -1) {
+      productsInCart.addProduct(currentProduct)
+      console.log(currentProduct)
+    } else {
+      console.log('You already add this product')
+    }
   }
 
   render () {

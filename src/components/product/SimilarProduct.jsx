@@ -14,14 +14,14 @@ function SimilarProduct (props) {
   )
   return (
     <Card className='text-center similar-product-card'>
-      <CardImg src={props.image.src} alt={props.image.alt} />
+      <CardImg src={props.image.src} alt={props.image.name} />
       <CardBody>
         <CardHeader tag='h5'>
           Име на продукта
         </CardHeader>
         {availabilityElement}
         <CardText className='d-none d-sm-block'>
-          {props.image.info}
+          {props.image.name}
         </CardText>
         <CardFooter>
           {buttonElement}

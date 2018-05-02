@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
+import { Button } from 'reactstrap'
 import './Product.css'
 
 class Product extends Component {
@@ -9,17 +11,23 @@ class Product extends Component {
       hovered: false
     }
     // Bind Handlers
+    this.onClickHandler = this.onClickHandler.bind(this)
+  }
+
+  onClickHandler (e) {
+    e.preventDefault()
+    const link = 'product/' + this.props.id
+    this.props.history.push(link)
   }
 
   render () {
-    const link = 'product/' + this.props.id
     return (
       <div>
         <div className='hovereffect'>
-          <img className='img-responsive img-fluid' src={this.props.src} alt={this.props.name} />
+          <img className='img-responsive img-fluid random-img' src={this.props.src} alt={this.props.name} />
           <div className='overlay'>
             <h2>{this.props.name}</h2>
-            <a className='info' href={link}>link here</a>
+            <Button className='info border-light' onClick={this.onClickHandler}>Разгледай</Button>
           </div>
         </div>
       </div>
@@ -27,4 +35,4 @@ class Product extends Component {
   }
 }
 
-export default Product
+export default withRouter(Product)
