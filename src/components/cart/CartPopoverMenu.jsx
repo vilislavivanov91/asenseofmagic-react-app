@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom'
 import { IoIosCart } from 'react-icons/lib/io'
 import { Container, Popover, PopoverHeader, PopoverBody, NavItem, NavLink, Badge, Button } from 'reactstrap'
 import CartProducts from './CartProducts'
+import productsInCartData from '../../data/productsInCart'
 
 class CartPopoverMenu extends Component {
   constructor (props) {
@@ -10,7 +11,7 @@ class CartPopoverMenu extends Component {
 
     this.state = {
       popoverOpen: false,
-      numbersOfProductInCart: 3
+      numbersOfProductInCart: 0
     }
 
     // Bind Handlers
@@ -19,21 +20,28 @@ class CartPopoverMenu extends Component {
   }
 
   toggle () {
-    console.log('toggled')
     this.setState((prevState) => {
       return {
         popoverOpen: !prevState.popoverOpen
       }
     })
   }
+
   onButtonClickHandler () {
-    this.props.history.push('cart')
+    this.props.history.push('/cart')
+  }
+
+  componentDidMount () {
+    let numbersOfProductInCart = productsInCartData.getAllProducts().length
+    this.setState({
+      numbersOfProductInCart
+    })
   }
 
   render () {
     return (
-      <div>
-        <NavItem id='PopoverActivator' >
+      <div onClick={this.toggle} >
+        <NavItem id='PopoverActivator'>
           <NavLink href='#'>
             <IoIosCart onClick={this.toggle} className='text-secondary mr-0 h1 mr-1 pt-1' />
             <Badge color='success' className='ml-0'>

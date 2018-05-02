@@ -1,5 +1,7 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, CardText, CardImg, Button } from 'reactstrap'
+import { Card, CardHeader, CardBody, CardFooter, CardText, Button } from 'reactstrap'
+import ProductImage from '../common/ProductImage'
+import './SimilarProduct.css'
 
 function SimilarProduct (props) {
   const availabilityElement = props.image.available ? (
@@ -14,14 +16,19 @@ function SimilarProduct (props) {
   )
   return (
     <Card className='text-center similar-product-card'>
-      <CardImg src={props.image.src} alt={props.image.name} />
+      <ProductImage
+        className='similar-product-image'
+        name={props.image.name}
+        id={props.image.id}
+        src={props.image.src}
+        height={100} />
       <CardBody>
         <CardHeader tag='h5'>
-          Име на продукта
+          {props.image.name}
         </CardHeader>
         {availabilityElement}
         <CardText className='d-none d-sm-block'>
-          {props.image.name}
+          {props.image.price}лв.
         </CardText>
         <CardFooter>
           {buttonElement}

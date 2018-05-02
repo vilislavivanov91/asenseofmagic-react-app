@@ -6,7 +6,7 @@ const CartProduct = (props) => {
   return (
     <Row>
       <Col className='m-auto' xs={4}>
-        <img className='img-fluid' src={props.src} alt={props.name} />
+        <img className='img-fluid cart-img' src={props.src} alt={props.name} />
       </Col>
       <Col className='m-auto'>
         <div className='d-flex flex-column justify-items-center align-items-start'>

@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function NavigationLogo (props) {
   return (
     <div className='navigation-logo'>
-      <h2>Logo name</h2>
+      <Link className='h3 text-monospace' to='/home'>Logo name</Link>
     </div>
   )
 }

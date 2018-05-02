@@ -215,6 +215,24 @@ const Data = {
     })
     return product
   },
+  getRandomProducts: (count) => {
+    let products = []
+    let randomIndexArr = []
+    const allProductsLenght = Data.getAll().length
+    while (count > 0) {
+      let randomIndex = Math.floor(Math.random() * allProductsLenght) + 1
+
+      if (randomIndexArr.indexOf(randomIndex) >= 0) {
+        console.log(randomIndexArr.indexOf(randomIndex))
+      } else {
+        randomIndexArr.push(randomIndex)
+        const product = Data.getProductById(randomIndex)
+        products.push(product)
+        count -= 1
+      }
+    }
+    return products
+  },
   addProduct: (product) => {
     const id = allProducts.length
     product.id = id
