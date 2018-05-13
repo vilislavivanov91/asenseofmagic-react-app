@@ -13,7 +13,7 @@ const social = [
 
 function Footer (props) {
   return (
-    <footer className='pt-3'>
+    <footer className='container-fluid'>
       <Row className='pb-2'>
         <FooterLogo />
         <FooterSocial socialLinks={social} />
