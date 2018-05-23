@@ -12,9 +12,9 @@ const Data = {
   getAllProducts: () => {
     return allProducts.slice(0)
   },
-  removeProductById: (id) => {
+  removeProduct: (product) => {
     allProducts.forEach(p => {
-      if (p.id === id) {
+      if (p.id === product.id) {
         const index = allProducts.indexOf(p)
         allProducts.slice(index, 1)
       }

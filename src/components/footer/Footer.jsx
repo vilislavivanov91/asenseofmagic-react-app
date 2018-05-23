@@ -14,7 +14,7 @@ const social = [
 function Footer (props) {
   return (
     <footer className='container-fluid'>
-      <Row className='pb-2'>
+      <Row className='py-3'>
         <FooterLogo />
         <FooterSocial socialLinks={social} />
         <FooterMain />

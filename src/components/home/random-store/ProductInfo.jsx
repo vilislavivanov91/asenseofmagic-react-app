@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Card, CardText, CardTitle, Button } from 'reactstrap'
 import { withRouter } from 'react-router-dom'
-import productsInCartData from '../../../data/productsInCart'
+import { addProductInCart, getTotalPriceInCart } from '../../../actions'
+import store from '../../../reduxStore'
 
 class ProductInfo extends Component {
   constructor (props) {
@@ -13,7 +14,8 @@ class ProductInfo extends Component {
     e.preventDefault()
     const product = this.props.product
 
-    productsInCartData.addProduct(product)
+    store.dispatch(addProductInCart(product))
+    store.dispatch(getTotalPriceInCart())
   }
   render () {
     return (

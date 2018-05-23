@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Navigation from './components/navigation/Navigation'
 import Footer from './components/footer/Footer'
 import Routes from './Routes'
+import './reduxStore'
+
 class App extends Component {
   render () {
     return (

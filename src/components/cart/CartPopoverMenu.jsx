@@ -3,7 +3,7 @@ import {withRouter} from 'react-router-dom'
 import { IoIosCart } from 'react-icons/lib/io'
 import { Container, Popover, PopoverHeader, PopoverBody, NavItem, NavLink, Badge, Button } from 'reactstrap'
 import CartProducts from './CartProducts'
-import productsInCartData from '../../data/productsInCart'
+import store from '../../reduxStore'
 
 class CartPopoverMenu extends Component {
   constructor (props) {
@@ -36,26 +36,29 @@ class CartPopoverMenu extends Component {
   }
 
   componentDidMount () {
-    let numbersOfProductInCart = productsInCartData.getAllProducts().length
-    this.setState({
-      numbersOfProductInCart
-    })
     this.setPrice()
     this.setNumbersOfProducts()
+
+    store.subscribe(() => {
+      let currentState = store.getState()
+      this.setState({
+        numberOfProducts: currentState.products.length,
+        totalPrice: currentState.totalPrice
+      })
+    })
   }
 
   setPrice () {
-    const totalPrice = productsInCartData.getProductsPrice()
-    this.setState({
-      totalPrice
+    store.subscribe(() => {
+      const currentState = store.getState()
+      this.setState({
+        totalPrice: currentState.totalPrice
+      })
     })
   }
 
   setNumbersOfProducts () {
-    const numberOfProducts = productsInCartData.getAllProducts().length
-    this.setState({
-      numberOfProducts
-    })
+
   }
 
   render () {
