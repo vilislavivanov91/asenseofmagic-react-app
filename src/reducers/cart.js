@@ -6,8 +6,11 @@ export default function (state = initialState, action) {
 
   switch (action.type) {
     case actionCartTypes.ADD_PRODUCT:
-      currentState.products.push(action.product)
-      console.log(currentState)
+      if (currentState.products.indexOf(action.product) === -1) {
+        currentState.products.push(action.product)
+      } else {
+        console.log('Product is already added in your cart!')
+      }
       return currentState
 
     case actionCartTypes.GET_PRODUCTS_PRICE:
@@ -16,7 +19,6 @@ export default function (state = initialState, action) {
         totalPrice += p.price
       })
       currentState.totalPrice = totalPrice
-      console.log(currentState)
       return currentState
 
     case actionCartTypes.REMOVE_PRODUCT:
@@ -25,7 +27,6 @@ export default function (state = initialState, action) {
         const productIndex = currentState.products.indexOf(product)
         currentState.products.splice(productIndex, 1)
       }
-      console.log(currentState)
       return currentState
     default: return state
   }

@@ -12,7 +12,8 @@ class CartPopoverMenu extends Component {
     this.state = {
       popoverOpen: false,
       numberOfProducts: 0,
-      totalPrice: 0
+      totalPrice: 0,
+      products: []
     }
 
     // Bind Handlers
@@ -26,8 +27,6 @@ class CartPopoverMenu extends Component {
         popoverOpen: !prevState.popoverOpen
       }
     })
-    this.setPrice()
-    this.setNumbersOfProducts()
   }
 
   onButtonClickHandler () {
@@ -36,29 +35,18 @@ class CartPopoverMenu extends Component {
   }
 
   componentDidMount () {
-    this.setPrice()
-    this.setNumbersOfProducts()
-
-    store.subscribe(() => {
+    this.unsubscribe = store.subscribe(() => {
       let currentState = store.getState()
       this.setState({
         numberOfProducts: currentState.products.length,
-        totalPrice: currentState.totalPrice
+        totalPrice: currentState.totalPrice,
+        products: currentState.products
       })
     })
   }
 
-  setPrice () {
-    store.subscribe(() => {
-      const currentState = store.getState()
-      this.setState({
-        totalPrice: currentState.totalPrice
-      })
-    })
-  }
-
-  setNumbersOfProducts () {
-
+  componentWillUnmount () {
+    this.unsubscribe()
   }
 
   render () {
@@ -86,7 +74,7 @@ class CartPopoverMenu extends Component {
           </PopoverHeader>
           <PopoverBody>
             <Container fluid>
-              <CartProducts />
+              <CartProducts products={this.state.products} />
               <Button onClick={this.onButtonClickHandler} className='my-2' block outline color='info'>Преглед на количката</Button>
             </Container>
           </PopoverBody>
