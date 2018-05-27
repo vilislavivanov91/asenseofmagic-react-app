@@ -9,12 +9,13 @@ export default function (state = initialState, action) {
       if (currentState.products.indexOf(action.product) === -1) {
         currentState.products.push(action.product)
       } else {
-        console.log('Product is already added in your cart!')
+        console.log(`Product - ${action.product.name} is already added in your cart!`)
       }
       return currentState
 
     case actionCartTypes.GET_PRODUCTS_PRICE:
       let totalPrice = 0
+      console.log(currentState.products)
       currentState.products.forEach(p => {
         totalPrice += p.price
       })

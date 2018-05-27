@@ -6,7 +6,7 @@ class CartProducts extends Component {
     const allProductsInCart = products.length > 0 ? (
       this.props.products.map(p => {
         return (
-          <CartProduct key={p.id} src={p.src} name={p.name} price={p.price} />
+          <CartProduct key={p.id} product={p} />
         )
       })
     ) : (

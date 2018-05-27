@@ -37,6 +37,7 @@ class CartPopoverMenu extends Component {
   componentDidMount () {
     this.unsubscribe = store.subscribe(() => {
       let currentState = store.getState()
+      console.log(currentState.totalPrice)
       this.setState({
         numberOfProducts: currentState.products.length,
         totalPrice: currentState.totalPrice,
