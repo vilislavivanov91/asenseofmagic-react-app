@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Row, Col, Button } from 'reactstrap'
 import { IoAndroidClose } from 'react-icons/lib/io'
 import store from '../../reduxStore'
-import { removeProductFromCart, getTotalPriceInCart } from '../../actions'
+import { remove, getTotalPrice } from '../../actions/cartAction'
 
 class CartProduct extends Component {
   constructor (props) {
@@ -13,12 +14,13 @@ class CartProduct extends Component {
   }
 
   handleButtonClick () {
-    store.dispatch(removeProductFromCart(this.props.product))
-    store.dispatch(getTotalPriceInCart())
+    store.dispatch(remove(this.props.product))
+    store.dispatch(getTotalPrice())
   }
 
   render () {
     const product = this.props.product
+    const productLink = `/product/${product.id}`
     return (
       <Row>
         <Col className='m-auto' xs={4}>
@@ -26,7 +28,7 @@ class CartProduct extends Component {
         </Col>
         <Col className='m-auto'>
           <div className='d-flex flex-column justify-items-center align-items-start'>
-            <h6 className='text-info'>{product.name}</h6>
+            <Link to={productLink} className='text-info'>{product.name}</Link>
             <p>{product.price}</p>
           </div>
         </Col>

@@ -3,7 +3,8 @@ import { Button } from 'reactstrap'
 import { IoIosCart } from 'react-icons/lib/io'
 import RatingStar from './RatingStar'
 import SharingButtons from './SharingButtons'
-import productsInCart from '../../data/productsInCart'
+import store from '../../reduxStore'
+import { add, getTotalPrice } from '../../actions/cartAction'
 
 class ProductInfo extends Component {
   constructor (props) {
@@ -16,8 +17,8 @@ class ProductInfo extends Component {
   onClickHandler (e) {
     e.preventDefault()
     const currentProduct = this.props.product
-
-    productsInCart.addProduct(currentProduct)
+    store.dispatch(add(currentProduct))
+    store.dispatch(getTotalPrice())
   }
 
   render () {

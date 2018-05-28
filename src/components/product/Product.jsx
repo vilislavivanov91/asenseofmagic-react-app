@@ -13,9 +13,7 @@ class Product extends Component {
     super(props)
 
     this.state = {
-      currentProduct: { },
-      available: true,
-      currentRate: 0,
+      currentProduct: {},
       isVoted: false
     }
 
@@ -28,8 +26,8 @@ class Product extends Component {
 
     const id = (this.props.match.params.id)
     const product = productData.getProductById(Number(id))
-    console.log(product.name)
-    console.log(product.price)
+
+    // Use redux to add the current product and data
 
     this.setState({
       currentProduct: product
@@ -46,6 +44,7 @@ class Product extends Component {
         if (isNaN(avarageRate)) {
           avarageRate = 0
         }
+        // Add logic for adding currentRate to redux state
 
         let currentProduct = prevState.currentProduct
         currentProduct.rateValue = newValue
@@ -73,7 +72,7 @@ class Product extends Component {
               <ProductInfo
                 available={this.state.currentProduct.available}
                 ratingCompleted={this.ratingCompleted}
-                currentRate={this.state.currentRate}
+                currentRate={this.state.currentProduct.rateValue}
                 numberOfStars={5}
                 avarageRate={this.state.currentProduct.avarageRate}
                 rateCount={this.state.currentProduct.rateCount}

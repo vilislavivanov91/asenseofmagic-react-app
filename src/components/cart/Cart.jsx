@@ -16,21 +16,22 @@ class Cart extends Component {
   componentDidMount () {
     window.scrollTo(0, 0)
 
+    this.setReduxState()
     this.unsubscribe = store.subscribe(() => {
-      let currentState = store.getState()
-      this.setState({
-        products: currentState.products
-      })
-    })
-
-    let currentState = store.getState()
-    this.setState({
-      products: currentState.products
+      this.setReduxState()
     })
   }
 
   componentWillUnmount () {
     this.unsubscribe()
+  }
+
+  setReduxState () {
+    console.log('here')
+    let currentState = store.getState().cartReducer
+    this.setState({
+      products: currentState.products
+    })
   }
 
   render () {
