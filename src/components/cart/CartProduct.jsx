@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { Row, Col, Button } from 'reactstrap'
 import { IoAndroidClose } from 'react-icons/lib/io'
 import store from '../../reduxStore'
@@ -28,7 +27,7 @@ class CartProduct extends Component {
         </Col>
         <Col className='m-auto'>
           <div className='d-flex flex-column justify-items-center align-items-start'>
-            <Link to={productLink} className='text-info'>{product.name}</Link>
+            <a href={productLink} className='text-info'>{product.name}</a>
             <p>{product.price}</p>
           </div>
         </Col>

@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, GET_ALL, GET_PRODUCT_BY_ID, GET_RANDOM_PRODUCTS } from '../constants/actionTypesProduct'
+import { ADD_PRODUCT, GET_ALL, GET_PRODUCT_BY_ID, GET_RANDOM_PRODUCTS, UPDATE_PRODUCT } from '../constants/actionTypesProduct'
 import initialState from '../data/initialState'
 
 export default function (state = initialState, action) {
@@ -16,6 +16,11 @@ export default function (state = initialState, action) {
       return 1
     case GET_RANDOM_PRODUCTS:
       return 1
+    case UPDATE_PRODUCT:
+      const newProduct = action.product
+      const id = action.id
+      currentState.productData[id] = newProduct
+      return currentState
     default:
       return state
   }

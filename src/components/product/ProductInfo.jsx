@@ -35,6 +35,7 @@ class ProductInfo extends Component {
         {this.props.available ? <p className='text-success text-center'>Наличен</p>
           : <p className='text-danger text-center'>Не е наличен</p>}
         <RatingStar
+          id={this.props.id}
           ratingCompleted={this.props.ratingCompleted}
           currentRate={this.props.currentRate}
           numberOfStars={this.props.numberOfStars} />

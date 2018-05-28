@@ -6,6 +6,8 @@ import ProductInfo from './ProductInfo'
 import SimilarProducts from './SimilarProducts'
 import ReviewSection from './ReviewSection'
 import productData from '../../data/productData'
+import store from '../../reduxStore'
+import { updateProduct } from '../../actions/productsAction'
 import './Product.css'
 
 class Product extends Component {
@@ -24,40 +26,40 @@ class Product extends Component {
   componentDidMount () {
     window.scrollTo(0, 0)
 
-    const id = (this.props.match.params.id)
-    const product = productData.getProductById(Number(id))
-
     // Use redux to add the current product and data
 
-    this.setState({
-      currentProduct: product
+    this.setCurrentProduct()
+
+    store.subscribe(() => {
+      this.setCurrentProduct()
     })
   }
 
   ratingCompleted (newValue) {
     if (!this.state.isVoted) {
-      this.setState((prevState, props) => {
-        const allRates = prevState.currentProduct.allRates + newValue
-        const rateCount = prevState.currentProduct.rateCount + 1
-        let avarageRate = allRates / rateCount
+      const allRates = this.state.currentProduct.allRates + newValue
+      const rateCount = this.state.currentProduct.rateCount + 1
+      let avarageRate = allRates / rateCount
 
-        if (isNaN(avarageRate)) {
-          avarageRate = 0
-        }
-        // Add logic for adding currentRate to redux state
+      if (isNaN(avarageRate)) {
+        avarageRate = 0
+      }
+      // Add logic for adding currentRate to redux state
 
-        let currentProduct = prevState.currentProduct
-        currentProduct.rateValue = newValue
-        currentProduct.rateCount = rateCount
-        currentProduct.avarageRate = avarageRate
-        currentProduct.allRates = allRates
-        return {
-          currentRate: newValue,
-          isVoted: true,
-          currentProduct
-        }
-      })
+      let currentProduct = this.state.currentProduct
+      currentProduct.rateValue = newValue
+      currentProduct.rateCount = rateCount
+      currentProduct.avarageRate = avarageRate
+      currentProduct.allRates = allRates
+      store.dispatch(updateProduct(currentProduct.id, currentProduct))
     }
+  }
+
+  setCurrentProduct () {
+    const product = productData.getProductById(Number(this.props.match.params.id))
+    this.setState({
+      currentProduct: product
+    })
   }
 
   render () {
@@ -70,6 +72,7 @@ class Product extends Component {
             </Col>
             <Col lg={6} xs={12}>
               <ProductInfo
+                id={this.props.match.params.id}
                 available={this.state.currentProduct.available}
                 ratingCompleted={this.ratingCompleted}
                 currentRate={this.state.currentProduct.rateValue}

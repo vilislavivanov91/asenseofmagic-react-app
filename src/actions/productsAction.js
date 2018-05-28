@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, GET_ALL, GET_PRODUCT_BY_ID, GET_RANDOM_PRODUCTS } from '../constants/actionTypesProduct'
+import { ADD_PRODUCT, GET_ALL, GET_PRODUCT_BY_ID, GET_RANDOM_PRODUCTS, UPDATE_PRODUCT } from '../constants/actionTypesProduct'
 
 export const addProduct = (product) => {
   return {
@@ -23,5 +23,13 @@ export const getProductById = (id) => {
 export const getRandomProduct = () => {
   return {
     type: GET_RANDOM_PRODUCTS
+  }
+}
+
+export const updateProduct = (id, product) => {
+  return {
+    type: UPDATE_PRODUCT,
+    id,
+    product
   }
 }
