@@ -1,6 +1,7 @@
 let initialState = [{
   name: 'First Product',
   price: 100,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'https://www.familydollar.com/content/dam/familydollar/products-services/products-module-image.jpg',
   id: 1,
   comments: '',
@@ -12,6 +13,7 @@ let initialState = [{
 }, {
   name: 'Second Product',
   price: 200,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'http://www.pepsico.com/images/album/what-we-believe-redesign/products/products-progress-7up.jpg?sfvrsn=3576d841_0',
   id: 2,
   comments: '',
@@ -23,6 +25,7 @@ let initialState = [{
 }, {
   name: 'Third Product',
   price: 130,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'https://www.nestle.com/asset-library/PublishingImages/AboutUs/Ask%20Nestle/ask-nestle-products-maggi-noodles.png',
   id: 3,
   comments: '',
@@ -35,6 +38,7 @@ let initialState = [{
 {
   name: 'One more Product',
   price: 49,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'https://media.allure.com/photos/57d18462067b53970386200c/master/pass/natural-products.jpg',
   id: 4,
   comments: '',
@@ -47,6 +51,7 @@ let initialState = [{
 {
   name: 'Test Product',
   price: 140,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2Famazon-best-selling-travel.jpg%3Fitok%3DrtSsP-Uj&w=700&q=85',
   id: 5,
   comments: '',
@@ -59,6 +64,7 @@ let initialState = [{
 {
   name: 'FProduct',
   price: 230,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'https://www.ul.com/consumer-retail-services/wp-content/uploads/2017/02/crs-ne-news-bigstock-Cosmetic-Products-103786991.jpg',
   id: 6,
   comments: '',
@@ -70,6 +76,7 @@ let initialState = [{
 }, {
   name: 'FRP',
   price: 25,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'https://cnet1.cbsistatic.com/img/01f5O3JxpnEtVFmjEjD7msOl3tw=/512x384/2016/05/10/1691790c-3479-4db3-ab6f-a238ab9eac44/pile-of-phones-may-2016-5345-001.jpg',
   id: 7,
   comments: '',
@@ -81,6 +88,7 @@ let initialState = [{
 }, {
   name: 'bmw',
   price: 3200,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'http://s.newsweek.com/sites/www.newsweek.com/files/styles/lg/public/2017/12/14/best-marijuana-products-2017.png',
   id: 8,
   comments: '',
@@ -92,6 +100,7 @@ let initialState = [{
 }, {
   name: 'pet',
   price: 48,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'http://s3.amazonaws.com/nike-demo/assets/37697/Nike_LunarEpic_Flyknit_Profile_Black_square_1600.jpg?1457660242',
   id: 9,
   comments: '',
@@ -103,6 +112,7 @@ let initialState = [{
 }, {
   name: 'Jet',
   price: 32,
+  info: 'some long text for infomation about every product.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
   src: 'https://www.incimages.com/uploaded_files/image/970x450/EcoProducts_Pan_6452.jpg',
   id: 10,
   comments: '',
