@@ -7,7 +7,7 @@ class ContactForm extends Component {
     super(props)
 
     this.state = {
-      name: '',
+      username: '',
       email: '',
       subject: '',
       message: ''
@@ -23,6 +23,7 @@ class ContactForm extends Component {
     e.preventDefault()
 
     // Send form somewhere
+    console.log(this.state)
   }
 
   handleInputchange (e) {
@@ -35,13 +36,13 @@ class ContactForm extends Component {
   }
 
   onClickHandler () {
-
+    console.log(this.state)
   }
 
   render () {
     return (
       <Col sm={8} className='mt-5'>
-        <Form>
+        <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <div className='input-group mb-2'>
               <div className='input-group-prepend'>
@@ -49,7 +50,14 @@ class ContactForm extends Component {
                   <IoAt />
                 </div>
               </div>
-              <input type='text' required className='form-control' placeholder='Email' />
+              <input
+                type='text'
+                required
+                className='form-control'
+                placeholder='Email'
+                name='email'
+                value={this.state.email}
+                onChange={this.handleInputchange} />
             </div>
           </FormGroup>
           <FormGroup>
@@ -59,7 +67,13 @@ class ContactForm extends Component {
                   <IoPerson />
                 </div>
               </div>
-              <input type='text' className='form-control' placeholder='Username' />
+              <input
+                type='text'
+                className='form-control'
+                placeholder='Username'
+                name='username'
+                value={this.state.username}
+                onChange={this.handleInputchange} />
             </div>
           </FormGroup>
           <FormGroup>
@@ -69,7 +83,13 @@ class ContactForm extends Component {
                   <IoEdit />
                 </div>
               </div>
-              <input type='text' className='form-control' placeholder='Subject' />
+              <input
+                type='text'
+                className='form-control'
+                placeholder='Subject'
+                name='subject'
+                value={this.state.subject}
+                onChange={this.handleInputchange} />
             </div>
           </FormGroup>
           <FormGroup>
@@ -79,7 +99,14 @@ class ContactForm extends Component {
                   <IoClipboard />
                 </div>
               </div>
-              <textarea type='text' className='form-control' rows={5} placeholder='Message' />
+              <textarea
+                type='text'
+                className='form-control'
+                rows={5}
+                placeholder='Message'
+                name='message'
+                value={this.state.message}
+                onChange={this.handleInputchange} />
             </div>
           </FormGroup>
           <Button onClick={this.onClickHandler} outline color='info' block>Submit</Button>

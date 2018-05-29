@@ -7,7 +7,6 @@ const Data = {
     return currentState
   },
   getProductById: (id) => {
-    console.log(id)
     return Data.getAll().find(p => p.id === id) || Data.getAll().find(p => p.id === id - 1)
   },
   getRandomProducts: (count) => {
@@ -26,7 +25,6 @@ const Data = {
         }
       }
     }
-    console.log(products)
     return products
   },
   addProduct: (product) => {

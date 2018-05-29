@@ -15,7 +15,6 @@ class RandomProducts extends Component {
   }
   componentDidMount () {
     const randomProducts = productData.getRandomProducts(4)
-    console.log(randomProducts)
     this.setState({
       randomProducts
     })

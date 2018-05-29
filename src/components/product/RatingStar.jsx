@@ -8,7 +8,7 @@ class RatingStar extends Component {
     super(props)
 
     this.state = {
-      currentRate: 0
+      avarageRate: 0
     }
   }
 
@@ -29,9 +29,9 @@ class RatingStar extends Component {
     const product = currentState.find(p => {
       return p.id === id
     })
-    const rateValue = product.rateValue
+    const avarageRate = product.avarageRate
     this.setState({
-      currentRate: rateValue
+      avarageRate
     })
   }
 
@@ -40,7 +40,7 @@ class RatingStar extends Component {
       <Row className='px-2 my-2 text-center'>
         <p className='align-self-end mx-5'>Оценка: </p>
         <StarRatings
-          rating={this.state.currentRate}
+          rating={this.state.avarageRate}
           starRatedColor='blue'
           changeRating={this.props.ratingCompleted}
           numberOfStars={this.props.numberOfStars} />
