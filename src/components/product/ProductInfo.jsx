@@ -30,7 +30,7 @@ class ProductInfo extends Component {
           <p className='d-inline-block mr-3'>Цена:</p>
           <p className='d-inline-block'>{this.props.product.price} лв.</p>
         </div>
-        <p className='text-center mb-0'>{this.props.product.name}</p>
+        <p className='text-center mb-0'>{this.props.product.info}</p>
         <br />
         {this.props.available ? <p className='text-success text-center'>Наличен</p>
           : <p className='text-danger text-center'>Не е наличен</p>}

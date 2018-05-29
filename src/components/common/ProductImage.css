@@ -90,5 +90,9 @@
 }
 
 .similar-product-image {
-  height: 260px;;
+  height: 250px;
+}
+
+.store-product-image {
+  height: 150px;  
 }
