@@ -7,29 +7,26 @@ const Data = {
     return currentState
   },
   getProductById: (id) => {
-    let product
-    Data.getAll().forEach(p => {
-      if (p.id === id) {
-        product = p
-      }
-    })
-    return product
+    console.log(id)
+    return Data.getAll().find(p => p.id === id) || Data.getAll().find(p => p.id === id - 1)
   },
   getRandomProducts: (count) => {
     let products = []
     let randomIndexArr = []
-    const allProductsLenght = Data.getAll().length
+    const allProductsLength = Data.getAll().length
     while (count > 0) {
-      let randomIndex = Math.floor(Math.random() * allProductsLenght) + 1
+      let randomIndex = Math.floor(Math.random() * allProductsLength) + 1
 
-      if (randomIndexArr.indexOf(randomIndex) >= 0) {
-      } else {
+      if (randomIndexArr.indexOf(randomIndex) === -1) {
         randomIndexArr.push(randomIndex)
         const product = Data.getProductById(randomIndex)
-        products.push(product)
-        count -= 1
+        if (products.indexOf(product) < 0) {
+          products.push(product)
+          count -= 1
+        }
       }
     }
+    console.log(products)
     return products
   },
   addProduct: (product) => {

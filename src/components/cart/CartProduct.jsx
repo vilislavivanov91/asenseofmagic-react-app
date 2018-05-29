@@ -3,6 +3,7 @@ import { Row, Col, Button } from 'reactstrap'
 import { IoAndroidClose } from 'react-icons/lib/io'
 import store from '../../reduxStore'
 import { remove, getTotalPrice } from '../../actions/cartAction'
+import { Link } from 'react-router-dom'
 
 class CartProduct extends Component {
   constructor (props) {
@@ -27,7 +28,7 @@ class CartProduct extends Component {
         </Col>
         <Col className='m-auto'>
           <div className='d-flex flex-column justify-items-center align-items-start'>
-            <a href={productLink} className='text-info'>{product.name}</a>
+            <Link to={productLink} className='text-info'>{product.name}</Link>
             <p>{product.price}</p>
           </div>
         </Col>

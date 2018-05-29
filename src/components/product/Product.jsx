@@ -30,9 +30,13 @@ class Product extends Component {
 
     this.setCurrentProduct()
 
-    store.subscribe(() => {
+    this.unsubscribe = store.subscribe(() => {
       this.setCurrentProduct()
     })
+  }
+
+  componentWillUnmount () {
+    this.unsubscribe()
   }
 
   ratingCompleted (newValue) {
@@ -52,6 +56,9 @@ class Product extends Component {
       currentProduct.avarageRate = avarageRate
       currentProduct.allRates = allRates
       store.dispatch(updateProduct(currentProduct.id, currentProduct))
+      this.setState({
+        isVoted: true
+      })
     }
   }
 
@@ -67,20 +74,22 @@ class Product extends Component {
       <div >
         <Container id='top'>
           <Row >
-            <Col lg={6} xs={12}>
-              <ProductImages img={this.state.currentProduct} />
-            </Col>
-            <Col lg={6} xs={12}>
-              <ProductInfo
-                id={this.props.match.params.id}
-                available={this.state.currentProduct.available}
-                ratingCompleted={this.ratingCompleted}
-                currentRate={this.state.currentProduct.rateValue}
-                numberOfStars={5}
-                avarageRate={this.state.currentProduct.avarageRate}
-                rateCount={this.state.currentProduct.rateCount}
-                product={this.state.currentProduct} />
-            </Col>
+            <div className='product-wrapper'>
+              <Col lg={6} xs={12}>
+                <ProductImages img={this.state.currentProduct} />
+              </Col>
+              <Col lg={6} xs={12}>
+                <ProductInfo
+                  id={this.props.match.params.id}
+                  available={this.state.currentProduct.available}
+                  ratingCompleted={this.ratingCompleted}
+                  currentRate={this.state.currentProduct.rateValue}
+                  numberOfStars={5}
+                  avarageRate={this.state.currentProduct.avarageRate}
+                  rateCount={this.state.currentProduct.rateCount}
+                  product={this.state.currentProduct} />
+              </Col>
+            </div>
           </Row>
           <hr className='my-5' />
           <SimilarProducts />

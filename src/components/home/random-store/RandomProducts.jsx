@@ -10,18 +10,18 @@ class RandomProducts extends Component {
     super(props)
 
     this.state = {
-      products: []
+      randomProducts: []
     }
   }
   componentDidMount () {
-    const products = productData.getRandomProducts(4)
-
+    const randomProducts = productData.getRandomProducts(4)
+    console.log(randomProducts)
     this.setState({
-      products
+      randomProducts
     })
   }
   render () {
-    const productsElement = this.state.products.map(p => {
+    const productsElement = this.state.randomProducts.map(p => {
       return (
         <Col sm={6} key={p.id} className='my-4'>
           <Product src={p.src} name={p.name} id={p.id} />

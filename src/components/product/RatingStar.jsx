@@ -14,9 +14,13 @@ class RatingStar extends Component {
 
   componentDidMount () {
     this.setCurrentRate()
-    store.subscribe(() => {
+    this.unsubscribe = store.subscribe(() => {
       this.setCurrentRate()
     })
+  }
+
+  componentWillUnmount () {
+    this.unsubscribe()
   }
 
   setCurrentRate () {
