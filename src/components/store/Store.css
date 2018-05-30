@@ -1,8 +1,19 @@
 .store-wrapper {
-  margin-top: 250px;
+  margin-top: 120px;
   margin-bottom: 100px;
+  position: relative;
 }
 
 .product-cart {
   margin-bottom: 30px; 
+}
+
+.order-button {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+.products-wrapper {
+  margin-top: 50px;
 }

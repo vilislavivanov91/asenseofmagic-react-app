@@ -212,4 +212,6 @@ let initialState = [{
 }
 ]
 
+// ADD dateCreated
+
 export default initialState

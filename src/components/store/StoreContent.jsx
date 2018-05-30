@@ -27,8 +27,33 @@ class StoreContent extends Component {
     })
   }
 
+  sortProducts (sortBy) {
+    const sortProducts = this.state.allProducts
+    if (sortBy === 'alphabetically') {
+      return sortProducts.sort((a, b) => {
+        return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0
+      })
+    } else if (sortBy === 'newestFirst') {
+      return sortProducts.sort((a, b) => {
+        return (a.dateCreated < b.dateCreated) ? -1 : (a.dateCreated > b.dateCreated) ? 1 : 0
+      })
+    } else if (sortBy === 'lowestPriceFirst') {
+      return sortProducts.sort((a, b) => {
+        return (a.price > b.price) ? 1 : (a.price < b.price) ? -1 : 0
+      })
+    } else if (sortBy === 'highestPriceFirst') {
+      return sortProducts.sort((a, b) => {
+        return (a.price < b.price) ? 1 : (a.price > b.price) ? -1 : 0
+      })
+    } else {
+      return sortProducts
+    }
+  }
+
   render () {
-    const allProducts = this.state.allProducts.map(p => {
+    const sortBy = this.props.sortBy
+    const sortedProducts = this.sortProducts(sortBy)
+    const allProductsElement = sortedProducts.map(p => {
       return (
         <Col md={4} lg={3} xs={6} key={p.id}>
           <div className='product-cart'>
@@ -40,7 +65,7 @@ class StoreContent extends Component {
     return (
       <div>
         <Row>
-          {allProducts}
+          {allProductsElement}
         </Row>
       </div>
     )
